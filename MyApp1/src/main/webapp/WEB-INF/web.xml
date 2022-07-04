@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="5.0">
+  <servlet>
+    <description></description>
+    <display-name>LoginController</display-name>
+    <servlet-name>LoginController</servlet-name>
+    <servlet-class>com.amaan.project.controller.LoginController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginController</servlet-name>
+    <url-pattern>/LoginController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RegistrationController</display-name>
+    <servlet-name>RegistrationController</servlet-name>
+    <servlet-class>com.amaan.project.controller.RegistrationController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegistrationController</servlet-name>
+    <url-pattern>/RegistrationController</url-pattern>
+  </servlet-mapping>
+  <display-name>MyApp1</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+
+  <servlet>
+    <description></description>
+    <display-name>logoutController</display-name>
+    <servlet-name>logoutController</servlet-name>
+    <servlet-class>com.amaan.project.controller.logoutController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>logoutController</servlet-name>
+    <url-pattern>/logoutController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>addUserDataController</display-name>
+    <servlet-name>addUserDataController</servlet-name>
+    <servlet-class>com.amaan.project.controller.addUserDataController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>addUserDataController</servlet-name>
+    <url-pattern>/addUserDataController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>NotesViewerController</display-name>
+    <servlet-name>NotesViewerController</servlet-name>
+    <servlet-class>com.amaan.project.controller.NotesViewerController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NotesViewerController</servlet-name>
+    <url-pattern>/NotesViewerController</url-pattern>
+  </servlet-mapping>
+  
+  
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>MyResources</web-resource-name>
+      <url-pattern>/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>myUserRole</role-name>
+    </auth-constraint>
+  </security-constraint>
+  <login-config>
+    <auth-method>BASIC</auth-method>
+    <realm-name>FILE</realm-name>
+  </login-config>
+  
+  
+</web-app>

@@ -1,0 +1,17 @@
+#registerButton{
+    background-color: rgb(127, 195, 92);
+    border: black;
+}
+#registerButton:hover{
+    background-color: rgb(71, 109, 52);
+}
+#footer{
+    background-color: rgb(127, 195, 92);
+}
+#register{
+    color: rgb(243, 156, 18);
+}
+
+#title{
+    color: rgb(127, 195, 92);
+}
