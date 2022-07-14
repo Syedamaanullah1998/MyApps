@@ -31,7 +31,9 @@
                   <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
                     <!-- hidden field  -->
-                    <input type="hidden" id="status" value="<%=request.getAttribute("loginStatus")%>">
+                    <input type="hidden" id="loginStatus" value="<%=request.getAttribute("loginStatus")%>">
+                    <input type="hidden" id="deleteStatus" value="<%=request.getAttribute("deleteStatus")%>">
+                    
                     <p class="text-left h1 fw-bold mb-5 mx-1 mx-md-4 mt-4" id="title">Sign in</p>
 
                     <!-- form  -->
@@ -42,7 +44,7 @@
                       <div class="form-outline mb-4">
                         <label class="form-label" for="form3Example3">Username:</label>
                         <input type="text" name="username" id="form3Example3" class="form-control form-control-lg"
-                          placeholder="Enter a valid Username" />
+                          placeholder="Enter a valid Username" required />
 
                       </div>
 
@@ -50,7 +52,7 @@
                       <div class="form-outline mb-3">
                         <label class="form-label" for="form3Example4">Password:</label>
                         <input type="password" name="password" id="form3Example4" class="form-control form-control-lg"
-                          placeholder="Enter password" />
+                          placeholder="Enter password" required/>
 
                       </div>
 
@@ -80,10 +82,13 @@
     </section>
 
     <script type="text/javascript">
-      var status = document.getElementById("status").value;
-      console.log(status);
-      if (status === "failed") {
+      var loginStatus = document.getElementById("loginStatus").value;
+      var deleteStatus = document.getElementById("deleteStatus").value;
+      if (loginStatus === "failed") {
         alert("Oops!, Wrong Username or Password, please try again.");
+      }
+      if (deleteStatus === "success") {
+          alert("Your Account has been delete successfully!!!");
       }
     </script>
 

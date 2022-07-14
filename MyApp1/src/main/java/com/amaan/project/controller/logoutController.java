@@ -10,10 +10,10 @@ import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 
 @WebServlet("/logout")
-public class logoutController extends HttpServlet {
+public class LogoutController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-    public logoutController() {
+    public LogoutController() {
         super();
     }
 

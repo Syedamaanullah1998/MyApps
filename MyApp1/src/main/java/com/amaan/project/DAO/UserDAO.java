@@ -12,8 +12,8 @@ public class UserDAO {
 
     public boolean save(User user) {
         Connection connection = ConnectionUtil.getConnection();
-        PreparedStatement statement1;
-        PreparedStatement statement2;
+        PreparedStatement statement1=null;
+        PreparedStatement statement2=null;
 
         try {
         	
@@ -37,13 +37,51 @@ public class UserDAO {
             }
         } catch (SQLException var6) {
             var6.printStackTrace();
-            return false;
+            
         }
+        
+        try {
+        	statement1.close();
+        	statement2.close();
+			connection.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+        return false;
+        
     }
+    
+    
+    public int delete(User user) {
+        Connection connection = ConnectionUtil.getConnection();
+        PreparedStatement statement=null;
+        
+
+        try {
+            statement = connection.prepareStatement("DELETE FROM users where username=?");
+            statement.setString(1, user.getUsername());
+            int rowCount = statement.executeUpdate();
+            return rowCount;
+            
+        } catch (SQLException var6) {
+            var6.printStackTrace();
+        }
+        
+        try {
+        	statement.close();
+			connection.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+        return 0;
+    }
+    
+    
+    
 
     public User findUser(String username, String encyptedpassword) {
         User user = new User();
-        PreparedStatement statement;
+        PreparedStatement statement=null;
         Connection connection = ConnectionUtil.getConnection();
 
         try {
@@ -68,7 +106,15 @@ public class UserDAO {
             }
         } catch (SQLException var7) {
             var7.printStackTrace();
-            return user;
+            
         }
+        try {
+        	statement.close();
+			connection.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+        return user;
     }
+    
 }

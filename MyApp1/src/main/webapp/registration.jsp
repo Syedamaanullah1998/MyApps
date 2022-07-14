@@ -35,7 +35,7 @@
                                         <div class="d-flex flex-row align-items-center mb-4">
                                             <div class="form-outline flex-fill mb-0">
                                                 <input type="text" name="fName" placeholder="First Name"
-                                                    id="form3Example1c" class="form-control" />
+                                                    id="form3Example1c" class="form-control" required/>
                                             </div>
                                         </div>
 
@@ -43,7 +43,7 @@
                                         <div class="d-flex flex-row align-items-center mb-4">
                                             <div class="form-outline flex-fill mb-0">
                                                 <input type="text" name="lName" placeholder="Last Name"
-                                                    id="form3Example1c" class="form-control" />
+                                                    id="form3Example1c" class="form-control" required/>
                                             </div>
                                         </div>
 
@@ -51,7 +51,7 @@
                                         <div class="d-flex flex-row align-items-center mb-4">
                                             <div class="form-outline flex-fill mb-0">
                                                 <input type="text" name="username" placeholder="Username"
-                                                    id="form3Example1c" class="form-control" />
+                                                    id="form3Example1c" class="form-control" required/>
                                             </div>
                                         </div>
 
@@ -59,7 +59,7 @@
                                         <div class="d-flex flex-row align-items-center mb-4">
                                             <div class="form-outline flex-fill mb-0">
                                                 <input type="email" name="email" placeholder="Email" id="form3Example1c"
-                                                    class="form-control" />
+                                                    class="form-control" required/>
                                             </div>
                                         </div>
 
@@ -67,7 +67,7 @@
                                         <div class="d-flex flex-row align-items-center mb-4">
                                             <div class="form-outline flex-fill mb-0">
                                                 <input type="password" name="password" placeholder="Password"
-                                                    id="form3Example1c" class="form-control" />
+                                                    id="form3Example1c" class="form-control" required/>
                                             </div>
                                         </div>
 
@@ -104,7 +104,7 @@
         if (status === "success") {
             alert("congrats, Account Created Successfully, please login to continue");
         } else if(status==="failed"){
-            alert("Oops!, Account could not be created, please try again.");
+            alert("Oops!, Account could not be created. The user already exists.");
         }
     </script>
 </body>

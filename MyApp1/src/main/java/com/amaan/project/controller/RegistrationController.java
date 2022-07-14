@@ -50,8 +50,6 @@ public class RegistrationController extends HttpServlet {
 		}
 		dispatcher.forward(request, response);
 		
-		
-		
 	}
 
 }

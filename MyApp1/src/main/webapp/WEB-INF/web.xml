@@ -29,17 +29,6 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-
-  <servlet>
-    <description></description>
-    <display-name>logoutController</display-name>
-    <servlet-name>logoutController</servlet-name>
-    <servlet-class>com.amaan.project.controller.logoutController</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>logoutController</servlet-name>
-    <url-pattern>/logoutController</url-pattern>
-  </servlet-mapping>
   <servlet>
     <description></description>
     <display-name>addUserDataController</display-name>
@@ -60,8 +49,6 @@
     <servlet-name>NotesViewerController</servlet-name>
     <url-pattern>/NotesViewerController</url-pattern>
   </servlet-mapping>
-  
-  
   <security-constraint>
     <web-resource-collection>
       <web-resource-name>MyResources</web-resource-name>
@@ -75,6 +62,74 @@
     <auth-method>BASIC</auth-method>
     <realm-name>FILE</realm-name>
   </login-config>
-  
-  
+  <servlet>
+    <description></description>
+    <display-name>DeleteAccountController</display-name>
+    <servlet-name>DeleteAccountController</servlet-name>
+    <servlet-class>com.amaan.project.controller.DeleteAccountController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteAccountController</servlet-name>
+    <url-pattern>/DeleteAccountController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>NotesAddition</display-name>
+    <servlet-name>NotesAddition</servlet-name>
+    <servlet-class>com.amaan.project.controller.NotesAddition</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NotesAddition</servlet-name>
+    <url-pattern>/NotesAddition</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>NotesAdditionController</display-name>
+    <servlet-name>NotesAdditionController</servlet-name>
+    <servlet-class>com.amaan.project.controller.NotesAdditionController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NotesAdditionController</servlet-name>
+    <url-pattern>/NotesAdditionController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>NotesReadController</display-name>
+    <servlet-name>NotesReadController</servlet-name>
+    <servlet-class>com.amaan.project.controller.NotesReadController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NotesReadController</servlet-name>
+    <url-pattern>/NotesReadController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DataDeletionController</display-name>
+    <servlet-name>DataDeletionController</servlet-name>
+    <servlet-class>com.amaan.project.controller.DataDeletionController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DataDeletionController</servlet-name>
+    <url-pattern>/DataDeletionController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MyApp1Controller</display-name>
+    <servlet-name>MyApp1Controller</servlet-name>
+    <servlet-class>com.amaan.project.controller.MyApp1Controller</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MyApp1Controller</servlet-name>
+    <url-pattern>/MyApp1Controller</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>fileUploadController</display-name>
+    <servlet-name>fileUploadController</servlet-name>
+    <servlet-class>com.amaan.project.controller.fileUploadController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>fileUploadController</servlet-name>
+    <url-pattern>/fileUploadController</url-pattern>
+  </servlet-mapping>
 </web-app>

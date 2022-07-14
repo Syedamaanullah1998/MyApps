@@ -2,9 +2,10 @@ package com.amaan.project.model;
 
 public class UserData {
 	private int id;
-	private int user;
 	private String title;
 	private String content;
+	private int user;
+	
 	public int getId() {
 		return id;
 	}

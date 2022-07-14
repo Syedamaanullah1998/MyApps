@@ -38,8 +38,9 @@ public class LoginController extends HttpServlet {
 		User user = userDao.findUser(username, encryptedPassword);
 		
 		if(user!=null) {
+			request.setAttribute("task", "loggedIn");
 			session.setAttribute("user", user);
-			dispatcher=request.getRequestDispatcher("index.jsp");
+			dispatcher=request.getRequestDispatcher("notesRead");
 		}else {
 			request.setAttribute("loginStatus", "failed");
 			

@@ -1,50 +1,137 @@
-body{ 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+html {
+    font-family: "Montserrat", sans-serif;
+}
+body {
+    background: #eee;
     display:flex; 
-    flex-direction:column; 
-    
+    flex-direction:column
 }
+
 header{
-    
     font-weight: 600;
-    background-color:rgb(127, 195, 92);
-}
-nav{
+    background-color:rgb(122, 185, 88);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
     font-size: 20px;
     font-weight: bold;
+    padding: 10px 10px;
 }
+header h1 {
+    color: #fff;
+    font-family: "McLaren", cursive;
+    font-weight: 200;
+    margin-right: 40px;
+    margin-left: 20px;
+  }
 .navElements:hover{
     background-color: rgb(104, 158, 77);;
     border-radius: 10%;
-}
-img {
-    margin-left: 15px;
-    margin-right: 15px;
-    border-radius: 4px;
-    padding: 5px;
-    width: 50px;
-}
-#footer{
-    background-color: rgb(127, 195, 92);
-    margin-top:auto;
-}
-section{
-    display:flex; 
-    flex-direction:column; 
-    align-items: center;
-    justify-content: center;
-    height:84vh; margin:0; 
-}
-.message{
-    font-size: larger;
-    color: white;
-    text-align: center;
-    padding: 100px;
-    background-color: rgb(175, 173, 173);
-    border-radius: 15%;
+    font-size: 23px;
+
 }
 
-.about{
-    padding: 20px;
-    
+.notesForm {
+    position: relative;
+    width:1000px;
+    margin: 100px auto 20px auto;
+    background: #fff;
+    padding: 15px;
+    border-radius: 7px;
+    box-shadow: 0 1px 5px rgb(138, 137, 137);
+  }
+  .notesForm input,
+  .notesForm textarea {
+    width: 100%;
+    border: none;
+    padding: 4px;
+    outline: none;
+    font-size: 1.2em;
+    font-family: inherit;
+    resize: none;
+  }
+  .notesForm button {
+    background: rgb(102, 155, 76);
+    font-weight:bold;
+    color: #fff;
+    border: none;
+    width: 72px;
+    height: 36px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+  .note {
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px #ccc;
+    padding: 10px;
+    width: 480px;
+    margin: 50px 16px;
+    float: left;
+  }
+  .note h2 {
+    font-size: 1.1em;
+    margin-bottom: 6px;
+  }
+  .note p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  .delete {
+  position: relative;
+  float: right;
+  color:white;
+  background-color: rgb(102, 155, 76);
+  border: none;
+  width: 40%;
+  height: 36px;
+  cursor: pointer;
+  outline: none;
 }
+
+footer {
+position: absolute;
+text-align: center;
+bottom: 0;
+width: 100%;
+height: 2.5rem;
+}
+
+footer p {
+color: rgb(112, 111, 111);
+} 
+#name{
+    margin-top:40px;
+    margin-left: 30px;
+	color:rgb(112, 111, 111);
+	font-size:20px;	
+}
+
+
+.details{
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px #ccc;
+    padding: 10px;
+    width:50%;
+    margin: 50px 16px;
+    float: left; 
+}
+.details h1 {
+    font-size: 1.5 em;
+    margin-bottom: 6px;
+  }
+.details p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+
 
